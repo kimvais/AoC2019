@@ -32,9 +32,13 @@ let doOp c =
     | Op.Add -> binOp (+) c
     | Op.Mul -> binOp (*) c
 
-let bootUp fn = { OpPtr = 0; Mem = readIntCode fn; Halted = false }
-
 let rec run c =
     match c.Halted with
     | true -> c.Mem.[0]
     | false -> run (doOp c)
+    
+let reboot memory () =
+    {OpPtr= 0; Mem = Array.copy memory; Halted = false}
+    
+let bootUp fn =
+    reboot (readIntCode fn) ()

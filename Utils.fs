@@ -90,3 +90,4 @@ let memoize func =
             
 let readIntCode fn =
     readInput fn |> Seq.head |> splitS "," |> Seq.map int32 |> Array.ofSeq
+    

@@ -8,3 +8,7 @@ let day2 fn () =
     c.Mem.[1] <- 12
     c.Mem.[2] <- 2
     run c |> int64
+
+let day2part2 fn () =
+    let initialMemory = readIntCode fn
+    run (reboot initialMemory ())
