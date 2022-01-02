@@ -2,8 +2,8 @@ module AoC2019.Main
 
 open AoC2019.Utils
 open AoC2019.Day1
-(*
 open AoC2019.Day2
+(*
 open AoC2019.Day3
 open AoC2019.Day4
 open AoC2019.Day5
@@ -35,8 +35,8 @@ let main argv =
     match day with
     | "1" -> day1 "1" ()
     | "1b" -> day1part2 "1" ()
-    (*
     | "2" -> day2 "2" ()
+    (*
     | "2b" -> day2part2 "2" ()
     | "3" -> day3 "3" ()
     | "3b" -> day3part2 "3" ()
@@ -61,7 +61,7 @@ let main argv =
     | "17b" -> day17part2 201 230 -99 -65 ()
     | "test" -> day18 "[[[[[9,8],1],2],3],4]" ()
     *)
-    | "test" -> day1part2 "1" ()
+    | "test" -> day2 "2" ()
     |> printfn "%d"
     0
    

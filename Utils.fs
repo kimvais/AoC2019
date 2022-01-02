@@ -87,3 +87,6 @@ let memoize func =
             let value = func key
             cache.Add(key, value)
             value
+            
+let readIntCode fn =
+    readInput fn |> Seq.head |> splitS "," |> Seq.map int32 |> Array.ofSeq
